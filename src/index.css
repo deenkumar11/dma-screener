@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0e0f11] text-[#e8e6e1] font-sans antialiased;
+  }
+  * { box-sizing: border-box; }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#141518] border border-white/10 rounded-xl p-4 cursor-pointer
+           transition-colors hover:border-white/25;
+  }
+  .badge {
+    @apply text-[10px] font-medium px-2 py-0.5 rounded-full;
+  }
+  .stat-box {
+    @apply bg-[#141518] border border-white/10 rounded-xl p-4;
+  }
+  .input-dark {
+    @apply bg-[#1a1b1f] border border-white/10 text-[#e8e6e1] rounded-lg px-3 py-2
+           text-sm placeholder-[#5F5E5A] focus:outline-none focus:border-white/30 transition-colors;
+  }
+  .select-dark {
+    @apply bg-[#1a1b1f] border border-white/10 text-[#e8e6e1] rounded-lg px-3 py-2
+           text-sm focus:outline-none focus:border-white/30 transition-colors cursor-pointer;
+  }
+  .btn-red {
+    @apply bg-brand-red text-white text-sm font-medium px-4 py-2 rounded-lg
+           hover:bg-brand-red-dark transition-colors;
+  }
+  .btn-ghost {
+    @apply bg-transparent border border-white/15 text-[#e8e6e1] text-sm px-4 py-2 rounded-lg
+           hover:bg-white/5 transition-colors;
+  }
+}
